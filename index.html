@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>音楽</title>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>僕らまた</h1>
+    <img src="./images/play.png" id="icon" />
+    <audio id="mySong">
+        <source src="audio/song.mp3" type="audio/mp3" />
+      </audio>
+  
+      <script>
+        let mySong = document.getElementById("mySong");
+        let icon = document.getElementById("icon");
+  
+        icon.onclick = function () {
+          if (mySong.paused) {
+            mySong.play();
+            icon.src = "./images/pause.png";
+          } else {
+            mySong.pause();
+            icon.src = "./images/play.png";
+          }
+        };
+      </script>
+</body>
+</html>
